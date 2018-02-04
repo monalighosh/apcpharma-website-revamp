@@ -2,4 +2,4 @@
 
 Giving APC Pharma website a refreshing new look.  
 
-[Live Demo!](http://www.apcpharma.com)
+[Visit www.apcpharma.com](http://www.apcpharma.com)
