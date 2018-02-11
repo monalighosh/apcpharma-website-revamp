@@ -1,0 +1,25 @@
+{
+  "name": "apcpharma",
+  "version": "1.0.0",
+  "description": "APC Pharma Website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/monalighosh/apcpharma-website-revamp.git"
+  },
+  "author": "Monali Ghosh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/monalighosh/apcpharma-website-revamp/issues"
+  },
+  "homepage": "https://github.com/monalighosh/apcpharma-website-revamp#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.1.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0"
+  }
+}
