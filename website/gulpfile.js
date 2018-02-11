@@ -3,11 +3,23 @@ const gulp = require("gulp");
 const sass = require("gulp-sass");
 const autoprefixer = require("gulp-autoprefixer");
 const uglify = require("gulp-uglify");
+const imagemin = require("gulp-imagemin");
+const concat = require("gulp-concat");
+const cleanCSS = require("gulp-clean-css");
+const htmlmin = require("gulp-htmlmin");
+const babel = require("gulp-babel");
 
-// Styles
-gulp.task("styles", function(){
+// HTML
+gulp.task("html", function(){
+  return gulp.src("src/*.html")
+  .pipe(htmlmin({collapseWhitespace: true}))
+  .pipe(gulp.dest("build"));
+});
+
+// CSS
+gulp.task("css", function(){
   return gulp.src("src/sass/*.scss")
-  .pipe()
+  .pipe(cleanCSS)
   .pipe(gulp.dest("build/css"));
 });
 
@@ -19,8 +31,10 @@ return gulp.src()
 });
 
 // Scripts
-gulp.task("scripts", function(){
+gulp.task("js", function(){
   return gulp.src("src/js")
+  .pipe(babel({presets: ["env"]}))
+  .pipe(concat("all.js"))
   .pipe(uglify)
   .pipe(gulp.dest("build/js"));
 });
@@ -30,4 +44,4 @@ gulp.watch("watch", function(){
   return gulp.watch();
 });
 
-gulp.task('default', []);
+gulp.task('default', ["html", "css", "images", "js"]);
