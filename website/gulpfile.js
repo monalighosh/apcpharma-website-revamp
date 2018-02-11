@@ -9,39 +9,58 @@ const cleanCSS = require("gulp-clean-css");
 const htmlmin = require("gulp-htmlmin");
 const babel = require("gulp-babel");
 
-// HTML
+// File Paths
+const htmlFiles = "src/**/*.html";
+const cssFiles = "src/sass/**/*.scss";
+const imagesFiles = "src/images/**/*";
+const jsFiles = "src/js/**/*.js";
+
+// Function to log errors
+function logError(error){
+  console.error.bind(error);
+  this.emit("end");
+}
+
+// HTML tasks (Minify)
 gulp.task("html", function(){
-  return gulp.src("src/*.html")
+  return gulp.src(htmlFiles)
   .pipe(htmlmin({collapseWhitespace: true}))
   .pipe(gulp.dest("build"));
 });
 
-// CSS
+// CSS tasks (Sass, minify)
 gulp.task("css", function(){
-  return gulp.src("src/sass/*.scss")
-  .pipe(cleanCSS)
+  return gulp.src(cssFiles)
+  .pipe(sass())
+  .on("error", logError)
+  .pipe(cleanCSS())
   .pipe(gulp.dest("build/css"));
 });
 
-// Images
+// Images tasks (Optimize)
 gulp.task("images", function(){
-return gulp.src()
-.pipe()
-.pipe(gulp.dest("build/images"));
+  return gulp.src(imagesFiles)
+  .pipe(imagemin())
+  .pipe(gulp.dest("build/images"));
 });
 
-// Scripts
+// JS tasks (Babel, concat, minify)
 gulp.task("js", function(){
-  return gulp.src("src/js")
+  return gulp.src(jsFiles)
   .pipe(babel({presets: ["env"]}))
+  .on("error", logError)
   .pipe(concat("all.js"))
-  .pipe(uglify)
+  .pipe(uglify())
   .pipe(gulp.dest("build/js"));
 });
 
-// Watch
-gulp.watch("watch", function(){
-  return gulp.watch();
+// Watch tasks (Html, css, images, js)
+gulp.task("watch", function(){
+  gulp.watch(htmlFiles, ["html"]);
+  gulp.watch(cssFiles, ["css"]);
+  gulp.watch(imagesFiles, ["images"]);
+  gulp.watch(jsFiles, ["js"]);
 });
 
-gulp.task('default', ["html", "css", "images", "js"]);
+// Default Task
+gulp.task('default', ["html", "css", "images", "js", "watch"]);
