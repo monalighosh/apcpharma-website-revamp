@@ -1,6 +1,8 @@
 // Borders
-@mixin border-radius($radius) {
-  border-radius: $radius;
+@mixin border-radius($radius, $values) {
+  @each $value in $values {
+    border-#{$value}-radius: $radius;
+  }
 }
 
 // Padding & Margins
@@ -22,5 +24,19 @@
     left: $left;
   } @else if $property == "rel" {
     position: relative;
+  }
+}
+
+// Transitions
+@mixin transition($property, $duration, $style, $delay: null) {
+  transition: $property $duration $style $delay;
+}
+
+// Box and text shadow
+@mixin shadow($property, $x, $y, $blur, $expand, $color) {
+  @if $property == "box-shadow" {
+    box-shadow: $x $y $blur $expand $color;
+  } @else {
+    text-shadow: $x $y $blur $color;
   }
 }

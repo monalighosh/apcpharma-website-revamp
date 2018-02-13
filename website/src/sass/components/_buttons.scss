@@ -1,3 +1,40 @@
 .btn {
-  
+  text-align: center;
+  outline: none;
+  font-size: $fontSizeSmall;
+  border: 0;
+  cursor: pointer;
+  @include padMrg("padding", 1em 2em);
+  @include border-radius(30px, top-right bottom-right top-left bottom-left);
+  @include transition(all, 0.5s, ease-in-out);
+
+  &--turquoise {
+    background: $brightTurquoise;
+    color: $white;
+
+    &:hover {
+      background: $dodgerBlue;
+      @include shadow("box-shadow", 0, 0, 10px, 5px, rgba($dodgerBlue, 0.2));
+    }
+  }
+
+  &--white {
+    background: $white;
+    color: $darkGrey;
+
+    &:hover {
+      background: $dodgerLightBlue;
+      @include shadow("box-shadow", 0, 0, 10px, 5px, rgba($dodgerLightBlue, 0.2));
+    }
+  }
+
+  &--dodgerBlue {
+    background: $dodgerBlue;
+    color: $white;
+
+    &:hover {
+      background: $brightTurquoise;
+      @include shadow("box-shadow", 0, 0, 10px, 5px, rgba($brightTurquoise, 0.2));
+    }
+  }
 }
