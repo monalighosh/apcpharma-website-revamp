@@ -15,12 +15,6 @@ const cssFiles = "src/sass/**/*.scss";
 const imagesFiles = "src/images/**/*";
 const jsFiles = "src/js/**/*.js";
 
-// Function to log errors
-function logError(error){
-  console.error.bind(error);
-  this.emit("end");
-}
-
 // HTML tasks (Minify)
 gulp.task("html", function(){
   return gulp.src(htmlFiles)
@@ -31,8 +25,7 @@ gulp.task("html", function(){
 // CSS tasks (Sass, minify)
 gulp.task("css", function(){
   return gulp.src(cssFiles)
-  .pipe(sass())
-  .on("error", logError)
+  .pipe(sass().on('error', sass.logError))
   .pipe(cleanCSS())
   .pipe(gulp.dest("build/css"));
 });
@@ -48,7 +41,6 @@ gulp.task("images", function(){
 gulp.task("js", function(){
   return gulp.src(jsFiles)
   .pipe(babel({presets: ["env"]}))
-  .on("error", logError)
   .pipe(concat("all.js"))
   .pipe(uglify())
   .pipe(gulp.dest("build/js"));

@@ -4,7 +4,7 @@
   "description": "APC Pharma Website",
   "main": "index.js",
   "scripts": {
-    "server": "live-server --open=src --entry-file=index.html"
+    "server": "live-server --open=build --entry-file=index.html"
   },
   "repository": {
     "type": "git",

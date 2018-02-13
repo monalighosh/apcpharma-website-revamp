@@ -1,0 +1,1 @@
+"use strict";console.log("Js is running");
