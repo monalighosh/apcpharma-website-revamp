@@ -1,0 +1,22 @@
+.page-header {
+  width: 100%;
+  border-top: 10px solid $dodgerBlue;
+  @include padMrg(padding, 1em 2em);
+
+  &__content {
+    width: 100%;
+    max-width: 1300px;
+    border: 1px solid black;
+    @include padMrg(margin, 0 auto);
+  }
+
+  &__logo {
+    font-size: $baseFontSize * 2.5;
+    font-weight: $fontWeightBold;
+    color: $dodgerLightBlue;
+  }
+
+  &--logo-green {
+    color: $brightTurquoise;
+  }
+}

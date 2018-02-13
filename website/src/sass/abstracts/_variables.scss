@@ -5,7 +5,7 @@ $brightTurquoise: rgb(1, 237, 201); // #01EDC9
 $black: rgb(0, 0, 0); //#000000
 $darkGrey: lighten($black, 15%);
 $midGrey: lighten($black, 30%);
-$lightGrey: lighten($black, 55%);
+$lightGrey: lighten($black, 60%);
 $white: rgb(255, 255, 255); // #FFFFFF
 
 // Root
@@ -13,15 +13,16 @@ $bodyColor: $white;
 $textColor: $midGrey;
 
 // Typography
-$baseFont: 'Roboto', sans-serif;
+$baseFont: 'Poppins', sans-serif;
 $baseFontWeight: 400;
 $baseFontSize: 113%;
-$baseLineHeight: 1.5;
-$headingFontWeight: 500;
+$fontWeightBold: 700;
+$fontWeightMedium: 600;
 $headingFontSize: $baseFontSize * 2;
 $headingColor: $black;
 
 // Links
+$
 
 // Forms
 $formInputBackground: $white;

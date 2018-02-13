@@ -1,0 +1,7 @@
+.page-footer {
+  background: $midGrey;
+  width: 100%;
+  text-align: center;
+  @include padMrg("padding", 1.5em);
+  color: $lightGrey;
+}

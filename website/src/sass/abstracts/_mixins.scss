@@ -1,0 +1,26 @@
+// Borders
+@mixin border-radius($radius) {
+  border-radius: $radius;
+}
+
+// Padding & Margins
+@mixin padMrg($property, $values) {
+  @if $property == "padding" {
+    padding: $values;
+  } @else {
+    margin: $values;
+  }
+}
+
+// Position
+@mixin position($property, $top, $left, $right: null, $bottom: null) {
+  @if $property == "abs" {
+    position: absolute;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+  } @else if $property == "rel" {
+    position: relative;
+  }
+}

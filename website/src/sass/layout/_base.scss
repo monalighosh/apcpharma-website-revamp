@@ -1,10 +1,12 @@
 body {
-  font: 400 $baseFontSize $baseFont;
+  font: $baseFontWeight $baseFontSize $baseFont;
   background: $white;
   color: $midGrey;
 }
+
+
 h1 {
   font-size: $headingFontSize;
-  font-weight: $headingFontWeight;
+  font-weight: $fontWeightMedium;
   color: $headingColor;
 }
