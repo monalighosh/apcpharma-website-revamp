@@ -1,0 +1,23 @@
+.page-header__nav {
+  float: right;
+  @include padMrg(margin, 0 2em 0);
+}
+
+.page-header__list {
+  list-style-type: none;
+
+  &-item {
+    display: inline-block;
+  }
+}
+
+a.page-header__link {
+  color: $darkGrey;
+  font-size: $fontSizeSmall;
+  text-transform: uppercase;
+  @include padMrg(padding, 1em);
+
+  &:hover {
+    color: $dodgerBlue;
+  }
+}

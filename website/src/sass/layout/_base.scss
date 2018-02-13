@@ -1,12 +1,25 @@
 body {
-  font: $baseFontWeight $baseFontSize $baseFont;
   background: $white;
   color: $midGrey;
+  font: $baseFontWeight $baseFontSize $baseFont;
 }
 
-
 h1 {
+  color: $headingColor;
   font-size: $headingFontSize;
   font-weight: $fontWeightMedium;
-  color: $headingColor;
+}
+
+a:link {
+  color: $dodgerLightBlue;
+  @include transition(color, 0.5s, ease);
+}
+
+a:visited,
+a:hover {
+  color: $lightGrey;
+}
+
+a:active {
+  color: $brightTurquoise;
 }

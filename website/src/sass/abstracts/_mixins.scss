@@ -1,4 +1,13 @@
-// Borders
+// Border
+@mixin borderDisplay($property, $size, $style, $color) {
+  @if $property != border {
+    border-#{$property}: $size $style $color;
+  } @else {
+    #{$property}: $size $style $color;
+  }
+}
+
+// Border radius
 @mixin border-radius($radius, $values) {
   @each $value in $values {
     border-#{$value}-radius: $radius;
@@ -7,24 +16,29 @@
 
 // Padding & Margins
 @mixin padMrg($property, $values) {
-  @if $property == "padding" {
+  @if $property == padding {
     padding: $values;
   } @else {
-    margin: $values;
+    #{$property}: $values;
   }
 }
 
 // Position
-@mixin position($property, $top, $left, $right: null, $bottom: null) {
-  @if $property == "abs" {
-    position: absolute;
+@mixin position($property, $top: null, $left: null, $right: null, $bottom: null) {
+  @if $property == absolute or fixed {
+    position: $property;
     top: $top;
     right: $right;
     bottom: $bottom;
     left: $left;
-  } @else if $property == "rel" {
-    position: relative;
+  } @else {
+    position: $property;
   }
+}
+
+// Display element
+@mixin displayEle($property: inline-block) {
+  display: $property
 }
 
 // Transitions
@@ -40,3 +54,16 @@
     text-shadow: $x $y $blur $color;
   }
 }
+
+// Clearfix
+@mixin clearFix() {
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
