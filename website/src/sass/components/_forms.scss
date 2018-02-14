@@ -5,7 +5,12 @@ textarea {
   display: block;
   outline: none;
   @include padMrg(padding, 0.8em);
-  @include padMrg(margin, 1em);
+  @include padMrg(margin-bottom, 1em);
+  font-size: inherit;
+}
+
+.errorBox {
+  @include borderDisplay(border, 2px, solid, $red);
 }
 
 .contact-us__form {

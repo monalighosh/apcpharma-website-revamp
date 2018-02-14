@@ -1,1 +1,1 @@
-"use strict";console.log("Js is running");
+"use strict";function loadGoogleMap(){var o={lat:19.187543,lng:72.840801},e=new google.maps.Map(document.getElementById("locationMap"),{zoom:16,center:o});new google.maps.Marker({position:o,map:e})}

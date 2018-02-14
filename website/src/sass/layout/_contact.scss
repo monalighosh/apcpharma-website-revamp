@@ -1,5 +1,42 @@
 .contact-us {
+  @include clearFix();
+  @include padMrg(margin-bottom, 0);
+
   &__subHeading {
     color: $brightTurquoise;
+  }
+
+  &__form,
+  &__details {
+    width: 45%;
+
+    text-align: left;
+  }
+
+  &__form {
+    float: left;
+  }
+
+  &__details {
+    float: right;
+
+    div > p {
+      @include padMrg(margin-bottom, 1em);
+      border: 1px solid red;
+      display: inline-block;
+    }
+  }
+
+  &__location-map {
+    width: 100%;
+    height: 500px;
+  }
+
+  &--icons {
+    font-size: $baseFontSize * 1.2;
+    color: $dodgerLightBlue;
+    @include padMrg(margin, 10px 10px 0 0);
+    border: 1px solid red;
+    display: inline-block;
   }
 }
