@@ -6,6 +6,17 @@
     color: $brightTurquoise;
   }
 
+  &__content {
+    width: 100%;
+    max-width: 1300px;
+    @include padMrg(margin, 0 auto 3em);
+    @include clearFix();
+
+    > p {
+      @include padMrg(margin-bottom, 3em);
+    }
+  }
+
   &__form,
   &__details {
     width: 45%;

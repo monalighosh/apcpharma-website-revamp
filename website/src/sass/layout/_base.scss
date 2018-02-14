@@ -13,7 +13,7 @@ h1 {
 
 h2 {
   font-weight: $fontWeightMedium;
-  @include padMrg(padding-bottom, 1em);
+  @include padMrg(margin-bottom, 1em);
 }
 
 a:link {
@@ -32,7 +32,6 @@ a:active {
 
 main {
   @include padMrg(margin-top, 8em);
-  border: 1px solid black;
 }
 
 section {
