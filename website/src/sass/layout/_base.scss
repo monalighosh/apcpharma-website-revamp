@@ -12,6 +12,8 @@ h1 {
 }
 
 h2 {
+  font-size: $baseFontSize;
+  color: $black;
   font-weight: $fontWeightMedium;
   @include padMrg(margin-bottom, 1em);
 }
@@ -31,10 +33,10 @@ a:active {
 }
 
 main {
-  @include padMrg(margin-top, 8em);
+  @include padMrg(margin-top, 4.5em);
 }
 
 section {
   text-align: center;
-  @include padMrg(margin, 5em 0);
+  @include padMrg(padding-top, 2em);
 }

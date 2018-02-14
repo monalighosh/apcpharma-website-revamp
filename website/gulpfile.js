@@ -31,7 +31,7 @@ gulp.task("css", function(){
 });
 
 // Images tasks (Optimize)
-gulp.task("images", function(){
+gulp.task("imgs", function(){
   return gulp.src(imagesFiles)
   .pipe(imagemin())
   .pipe(gulp.dest("build/images"));
@@ -50,9 +50,9 @@ gulp.task("js", function(){
 gulp.task("watch", function(){
   gulp.watch(htmlFiles, ["html"]);
   gulp.watch(cssFiles, ["css"]);
-  gulp.watch(imagesFiles, ["images"]);
+  gulp.watch(imagesFiles, ["imgs"]);
   gulp.watch(jsFiles, ["js"]);
 });
 
 // Default Task
-gulp.task('default', ["html", "css", "images", "js", "watch"]);
+gulp.task('default', ["html", "css", "imgs", "js", "watch"]);
