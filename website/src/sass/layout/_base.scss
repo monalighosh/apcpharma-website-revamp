@@ -8,6 +8,7 @@ h1 {
   color: $headingColor;
   font-size: $headingFontSize;
   font-weight: $fontWeightMedium;
+  @include padMrg(padding-bottom, 1em);
 }
 
 a:link {
@@ -22,4 +23,14 @@ a:hover {
 
 a:active {
   color: $brightTurquoise;
+}
+
+main {
+  @include padMrg(margin-top, 8em);
+  border: 1px solid black;
+}
+
+section {
+  text-align: center;
+  @include padMrg(margin, 5em 0);
 }

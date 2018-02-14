@@ -10,7 +10,7 @@
   <!-- Responsive specific meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Fonts and icons -->
-  <link href="https://fonts.googleapis.com/css?family=Poppins:400,400i,600,600i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,400i,500,600,600i,700,700i" rel="stylesheet">
   <!-- CSS -->
   <link href="css/main.css" rel="stylesheet">
   <!-- Favicon -->
@@ -42,9 +42,8 @@
 
       <!-- About content -->
       <section class="about-us">
-        <h1>About Us</h1>
+        <h1><span class="about-us__subHeading">Welcome</span> to APC Pharma</h1>
         <div>
-          <h1>Welcome!</h1>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris dapibus purus metus, sit amet aliquet massa varius eleifend. Morbi eleifend ac leo vitae ullamcorper. Maecenas ipsum ex, lacinia at laoreet id, tempor sed arcu. Vestibulum interdum tristique augue vitae efficitur. Nam eu facilisis quam. Nullam id neque et nisl luctus ornare sed eget ipsum. Ut ligula sem, venenatis in volutpat et, ultrices quis ex. Integer venenatis arcu sit amet urna tempus, vel molestie felis consequat.</p>  
         </div>
         <div>
@@ -54,14 +53,23 @@
 
       <!-- Products content -->
       <section class="products">
-        <h1>Products</h1>
+        <h1 class="products__heading">Our Products</h1>
       </section>
 
       <!-- Contact content -->
       <section class="contact-us">
-        <h1>Contact Us</h1>
+        <h1><span class="contact-us__subHeading">Contact</span> Us</h1>
         <div class="contact-us__content">
-          <div class="contact-us__form"></div>
+          <div class="contact-us__form">
+            <form action="#" method="POST" name="contact-form" class="contact-form" novalidate>
+              <input type="text" name="name" placeholder="Your name *" autofocus>
+              <input type="tel" name="phone" placeholder="Your phone no.">
+              <input type="email" name="email" placeholder="Your email *">
+              <input type="text" name="company-name" placeholder="Your company name">
+              <textarea name="message" placeholder="Message *"></textarea>
+              <button class="btn btn--dodgerBlue">Send</button>
+            </form>
+          </div>
           <div class="contact-us__details"></div>
         </div>
         <div class="contact-us__location-map"></div>

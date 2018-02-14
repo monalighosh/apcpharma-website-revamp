@@ -2,6 +2,7 @@
   background: $white;
   width: 100%;
   line-height: 70px;
+  border: 1px solid red;
   @include borderDisplay(top, 10px, solid, $dodgerBlue);
   @include padMrg(padding, 1em 2em);
   @include position(fixed, 0, 0);
