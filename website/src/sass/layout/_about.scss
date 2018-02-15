@@ -13,7 +13,7 @@
     }
 
     > p:last-child {
-      @include padMrg(margin-bottom, 5em);
+      @include padMrg(margin-bottom, 4em);
     }
   }
 
@@ -41,6 +41,10 @@
 
   &__feature-description {
     @include padMrg(padding, 2em);
+
+    > h2 {
+      font-weight: $fontWeightMediumBold;
+    }
   }
 }
 
