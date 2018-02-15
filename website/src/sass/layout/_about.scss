@@ -9,6 +9,10 @@
     @include padMrg(margin, 0 auto);
 
     > p {
+      @include padMrg(margin-bottom, 1em);
+    }
+
+    > p:last-child {
       @include padMrg(margin-bottom, 3em);
     }
   }
@@ -17,11 +21,9 @@
     border: 1px solid red;
   }
 
-  &__feature-1,
-  &__feature-2,
-  &__feature-3 {
+  &__feature-content {
     @include displayEle();
-    width: 33.33%;
+    width: 25%;
     border: 1px solid red;
   }
 }
