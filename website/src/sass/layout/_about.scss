@@ -13,17 +13,45 @@
     }
 
     > p:last-child {
-      @include padMrg(margin-bottom, 3em);
+      @include padMrg(margin-bottom, 5em);
     }
   }
 
   &__features {
-    border: 1px solid red;
+    @include borderDisplay(top, 1px, solid, $lightestGrey);
   }
 
-  &__feature-content {
-    @include displayEle();
-    width: 25%;
-    border: 1px solid red;
+  &__features-content {
+    height: 300px;
+    @include clearFix();
+
+    > div {
+      float:left;
+      width: 25%;
+      height: 300px;
+      @include displayEle();
+    }
   }
+
+  &__features-img {
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__feature-description {
+    @include padMrg(padding, 2em);
+  }
+}
+
+.img-quality {
+  background-image: url(../images/about-quality.jpg);
+}
+
+.img-time {
+  background-image: url(../images/about-time.jpg);
+}
+
+.img-ethical {
+  background-image: url(../images/about-ethical.jpg);
 }
