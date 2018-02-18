@@ -41,6 +41,12 @@
 
   &__feature-description {
     @include padMrg(padding, 2em);
+    @include position(relative);
+  }
+
+  &__feature-description-tx {
+    @include position(absolute, 50%, 50%);
+    transform: translate(-50%, -50%);
 
     > h2 {
       font-weight: $fontWeightMediumBold;
@@ -58,4 +64,8 @@
 
 .img-ethical {
   background-image: url(../images/about-ethical.jpg);
+}
+
+.img-team {
+  background-image: url(../images/about-team.jpg);
 }
