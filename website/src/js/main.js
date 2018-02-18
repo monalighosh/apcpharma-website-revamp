@@ -3,7 +3,7 @@
 // Google map for contact us page
 function initMap() {
   const options = {
-    zoom: 16,
+    zoom: 13,
     center: {lat: 19.1828, lng: 72.8402}
   };
   const map = new google.maps.Map(document.getElementById("locationMap"), options);
