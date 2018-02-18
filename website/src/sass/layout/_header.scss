@@ -6,6 +6,7 @@
   @include borderDisplay(top, 10px, solid, $dodgerBlue);
   @include padMrg(padding, 1em 2em);
   @include position(fixed, 0, 0);
+  @include shadow(box-shadow, 0, -5px, 13px, 5px, rgba($black, 0.2));
 
   &__content {
     max-width: 1300px;

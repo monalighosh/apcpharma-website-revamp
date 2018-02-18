@@ -14,7 +14,7 @@
 
     &:hover {
       background: $dodgerBlue;
-      @include shadow("box-shadow", 0, 0, 10px, 5px, rgba($dodgerBlue, 0.2));
+      @include shadow(box-shadow, 0, 0, 10px, 5px, rgba($dodgerBlue, 0.2));
     }
   }
 
@@ -24,7 +24,7 @@
 
     &:hover {
       background: $dodgerLightBlue;
-      @include shadow("box-shadow", 0, 0, 10px, 5px, rgba($dodgerLightBlue, 0.2));
+      @include shadow(box-shadow, 0, 0, 10px, 5px, rgba($dodgerLightBlue, 0.2));
     }
   }
 
@@ -34,7 +34,7 @@
 
     &:hover {
       background: $brightTurquoise;
-      @include shadow("box-shadow", 0, 0, 10px, 5px, rgba($brightTurquoise, 0.2));
+      @include shadow(box-shadow, 0, 0, 10px, 5px, rgba($brightTurquoise, 0.2));
     }
   }
 }
