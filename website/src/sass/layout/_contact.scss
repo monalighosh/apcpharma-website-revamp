@@ -53,5 +53,27 @@
     width: 100%;
     height: 500px;
   }
+
+  &__map-content {
+    font-size: $baseFontSize;
+    color: $textColor;
+    line-height: 2;
+    font-family: $baseFont;
+
+    span {
+      font-weight: $fontWeightMediumBold;
+    }
+  }
+
+  &__map-heading {
+    font-size: $baseFontSize * 2;
+    @include padMrg(padding-bottom, 0);
+    color: $dodgerLightBlue;
+    font-weight: $fontWeightMediumBold;
+  }
+
+  &__map-subHead {
+    color: $brightTurquoise;
+  }
 }
 
