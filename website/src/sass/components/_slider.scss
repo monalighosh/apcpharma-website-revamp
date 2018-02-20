@@ -1,54 +1,43 @@
 .slider {
   width: 100%;
-  height: 700px;
+  height: 600px;
+  overflow: hidden;
   @include position(relative);
 
   &__slides {
-    width: 100%;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
     @include position(absolute, 0, 0, 0, 0);
-  }
+    @include transition(all, 0.2s, ease);
 
-  &--slide1 {
-    background-image: url(../images/home-slide1.jpg);
-  }  
-
-  &--slide2 {
-    background-image: url(../images/home-slide2.jpg);
-  }  
-
-  &--slide3 {
-    background-image: url(../images/home-slide3.jpg);
+    img {
+      width: 100%;
+    }
   }
 
   &__title {
-    transform: translate(-50%, -50%);
+    transform: translate(0, -50%);
     font-size: $baseFontSize * 1.8;
     text-shadow: 0 0 5px rgba($black, 0.3);
     background: rgba($white, 0.5);
     color: $black;
-    width: 0;
+    width: 100%;
+    @include transition(all, 0.2s, ease-in-out, 0.5s);
     @include padMrg(padding, 0.5em);
-    @include position(absolute, 50%, 50%);
+    @include position(absolute, 50%, 0);
   }
 
   &__dots {
-    transform: translate(-50%, -95%);
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
-    @include border-radius(50%);
-    @include position(absolute, 95%, 50%);
-    @include borderDisplay(border, 2px, solid, rgba($black, 0.7));
-  }
+    transform: translate(-50%, -100%);
+    z-index: 100;
+    @include position(absolute, 100%, 50%);
 
-  &--dot1 {
-    @include padMrg(margin, 0 2em); 
-  }
-
-  &--dot3 {
-    @include padMrg(margin, 0 4em); 
+    div {
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+      @include borderDisplay(border, 2px, solid, rgba($black, 0.7));
+      @include padMrg(margin, 1em);
+      @include border-radius(50%);
+      @include displayEle();
+    }
   }
 }
