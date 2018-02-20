@@ -8,10 +8,14 @@
 }
 
 // Border radius
-@mixin border-radius($radius, $values) {
-  @each $value in $values {
-    border-#{$value}-radius: $radius;
-  }
+@mixin border-radius($radius, $values: null) {
+  @if $values != null {
+    @each $value in $values {
+      border-#{$value}-radius: $radius;
+    }
+    } @else {
+      border-radius: $radius;
+    }
 }
 
 // Padding & Margins
