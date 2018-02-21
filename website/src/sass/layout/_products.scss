@@ -3,6 +3,5 @@
   min-height: 600px;
   &__heading {
     color: $white;
-    @include padMrg(padding-top, 1em);
   }
 }
