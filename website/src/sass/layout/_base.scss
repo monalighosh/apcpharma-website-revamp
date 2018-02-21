@@ -18,12 +18,13 @@ h2 {
   @include padMrg(margin-bottom, 1em);
 }
 
-a:link {
+a:link,
+a:visited {
   color: $dodgerLightBlue;
   @include transition(color, 0.5s, ease);
 }
 
-a:visited,
+
 a:hover {
   color: $lightGrey;
 }
