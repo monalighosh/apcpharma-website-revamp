@@ -119,13 +119,13 @@
         <div class="contact-us__content">
           <p>You can use a quick contact form to leave your message and we will get back to you as soon as possible. If your inquiry is urgent, please use the telephone number listed below to talk to us.</p>
           <div class="contact-us__form">
-            <form action="#" method="POST" name="contact-form" novalidate>
+            <form name="contact-form" id="contact-form" novalidate>
               <input type="text" name="name" placeholder="Your name *">
-              <input type="tel" name="phone" placeholder="Your phone no.">
+              <input type="tel" name="phone" placeholder="Your phone no. *">
               <input type="email" name="email" placeholder="Your email *">
               <input type="text" name="company-name" placeholder="Your company name">
-              <textarea name="message" placeholder="Message *"></textarea>
-              <button class="btn btn--dodgerBlue">Send</button>
+              <textarea name="message" placeholder="Message"></textarea>
+              <button class="btn btn--dodgerBlue" type="submit">Send</button>
             </form>
           </div>
           <div class="contact-us__details">
@@ -172,7 +172,7 @@
           <input type="email" name="email" placeholder="Your email *">
           <input type="text" name="interests" placeholder="Areas of interest">
           <input type="text" name="investing-capacity" placeholder="Investing capacity">
-          <textarea name="message" placeholder="Message *"></textarea>
+          <textarea name="message" placeholder="Message"></textarea>
           <ul class="dealer-modal__terms-list">
             <li class="dealer-modal__terms">Terms &amp; Conditions: </li>
             <li class="dealer-modal__terms"><i class="far fa-check-circle"></i>Investing capacity should be upto 4-5 Lacks.</li>
@@ -180,7 +180,7 @@
             <li class="dealer-modal__terms"><i class="far fa-check-circle"></i>Goods are not on credit.</li>
             <li class="dealer-modal__terms"><i class="far fa-check-circle"></i>Payment on delievery system.</li>
           </ul>
-          <button class="btn btn--dodgerBlue">Send</button>
+          <button class="btn btn--dodgerBlue" type="submit">Send</button>
         </form>
       </div>
     </div>

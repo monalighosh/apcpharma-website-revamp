@@ -15,8 +15,8 @@ textarea {
 
 input:focus,
 textarea:focus {
-  @include borderDisplay(border, 2px, solid, $dodgerBlue);
   color: $dodgerBlue;
+  @include borderDisplay(border, 2px, solid, $dodgerBlue);
 }
 
 .errorBox {
