@@ -23,7 +23,7 @@
     <header class="page-header">
       <div class="page-header__content">
         <p class="page-header__logo">APC <span class="page-header--logo-green">Pharma</span></p>
-        <button class="page-header__btn btn btn--turquoise" title="Become Our Dealer">Become Our Dealer</button>
+        <button class="page-header__btn btn btn--turquoise" title="Become Our Dealer" id="dealer">Become Our Dealer</button>
         <nav class="page-header__nav">
           <ul class="page-header__list">
             <li class="page-header__list-item"><a href="#" class="page-header__link" title="Home">Home</li>
@@ -143,7 +143,7 @@
     </main>
     <!-- Footer -->
     <footer class="page-footer">
-      <p>2018 &copy; APC Pharma. All rights reserved. | <a href="#" title="Privacy Policy">Privacy Policy</a> | Designed and maintained by <a href="#" title="Monali Ghosh">Monali Ghosh</a></p>
+      <p>2018 &copy; APC Pharma. All rights reserved. | <a href="#" title="Privacy Policy" id="privacy">Privacy Policy</a> | Designed and maintained by <a href="#" title="Monali Ghosh">Monali Ghosh</a></p>
     </footer>
     <!-- Privacy modal -->
     <div class="privacy-modal">
@@ -162,17 +162,26 @@
     </div>
     <!-- Become our dealer modal -->
     <div class="dealer-modal">
-      <div class="privacy-modal__content">
-        <span class="privacy-modal__close-btn" title="Close Window">&times;</span>
-        <h1><span class="privacy-modal__subHeading">Privacy</span> Policy</h1>
-        <h2>This page informs you of our policies regarding the collection, use and disclosure of Personal Information we receive from users of the Site.</h2>
-        <p>This privacy policy sets out how we use and protect any information that you give us when you use this website. We are committed to ensuring that your privacy is protected. Should we ask you to provide certain information by which you can be identified when using this website, then you can be assured that it will only be used in accordance with this privacy statement. We may change this policy from time to time by updating this page. You should check this page from time to time to ensure that you are happy with any changes. </p>
-        <h2>What we collect</h2>
-        <p>We may collect your name, contact information including email address, demographic information such as postcode, preferences and interests.</p>
-        <h2>What we do with the information we gather</h2>
-        <p>We require this information to understand your needs and provide you with a better service, and in particular for the Internal record keeping,  to improve our products and services or to send promotional email about new products, special offers or other information.</p>
-        <h2>Contact Us</h2>
-        <p>If you have any questions about this Privacy Policy, please contact us!</p>
+      <div class="dealer-modal__content">
+        <span class="dealer-modal__close-btn" title="Close Window">&times;</span>
+        <h1><span class="dealer-modal__subHeading">Become</span> Our Dealer</h1>
+        <form action="#" method="POST" name="dealer-form" class="dealer-modal__form" novalidate>
+          <input type="text" name="company" placeholder="Your company name *">
+          <input type="text" name="name" placeholder="Your name *" autofocus>
+          <input type="email" name="email" placeholder="Your email *">
+          <input type="tel" name="phone" placeholder="Your phone no. *">
+          <input type="text" name="investing-capacity" placeholder="Investing capacity">
+          <input type="text" name="interests" placeholder="Areas of interest">
+          <textarea name="message" placeholder="Message *"></textarea>
+          <ul class="dealer-modal__terms-list">
+            <li class="dealer-modal__terms">Terms &amp; Conditions: </li>
+            <li class="dealer-modal__terms"><i class="far fa-check-circle"></i>Investing capacity should be upto 4-5 Lacks.</li>
+            <li class="dealer-modal__terms"><i class="far fa-check-circle"></i>Should have at least 7-8 years of experience in this field.</li>
+            <li class="dealer-modal__terms"><i class="far fa-check-circle"></i>Goods are not on credit.</li>
+            <li class="dealer-modal__terms"><i class="far fa-check-circle"></i>Payment on delievery system.</li>
+          </ul>
+          <button class="btn btn--dodgerBlue">Send</button>
+        </form>
       </div>
     </div>
   </div>

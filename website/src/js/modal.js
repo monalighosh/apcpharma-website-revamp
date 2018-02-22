@@ -1,31 +1,51 @@
 "use strict";
-// Get modal element
-const modal = document.querySelector(".privacy-modal");
-// Get open modal privacy button
-const privacyBtn = document.querySelector("[title='Privacy Policy']");
-// Get close modal button
-const closeModalBtn = document.querySelector(".privacy-modal__close-btn");
+// Get privacy modal element
+const modalPrivacy = document.querySelector(".privacy-modal");
+const privacyBtn = document.querySelector("#privacy");
+const privacyCloseBtn = document.querySelector(".privacy-modal__close-btn");
 
-// Add click event listeners
-privacyBtn.addEventListener("click", openModal);
-closeModalBtn.addEventListener("click", closeModal);
-window.addEventListener("click", clickOutside);
+// Get dealer modal element
+const modalDealer = document.querySelector(".dealer-modal");
+const dealerBtn = document.querySelector("#dealer");
+const dealerCloseBtn = document.querySelector(".dealer-modal__close-btn");
+
+// Button click event listeners
+privacyBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  openModal(modalPrivacy);
+});
+
+dealerBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  openModal(modalDealer);
+});
+
+// Close button event listeners
+privacyCloseBtn.addEventListener("click", closeModal);
+dealerCloseBtn.addEventListener("click", closeModal);
+
+// Window click event listener to close modal when clicked outside
+window.addEventListener("click", (e) => {
+  if(e.target === modalPrivacy) {
+    closeModalOnOutsideClick(modalPrivacy);
+  } else if(e.target === modalDealer) {
+    closeModalOnOutsideClick(modalDealer);
+  }  
+});
 
 // Function to open modal
-function openModal(e) {
-  e.preventDefault();
-  modal.style.display = "block";
+function openModal(modalToOpen) {
+  modalToOpen.style.display = "block";
 }
 
 // Function to close modal
 function closeModal() {
-  modal.style.display = "none";
+  let parentModal = this.parentElement.parentElement;
+  parentModal.style.display = "none";
 }
 
 // Function to close modal when clicked outside
-function clickOutside(e) {
-  if(e.target === modal) {
-    modal.style.display = "none";
-  }
+function closeModalOnOutsideClick(modalToClose) {
+  modalToClose.style.display = "none";
 }
 

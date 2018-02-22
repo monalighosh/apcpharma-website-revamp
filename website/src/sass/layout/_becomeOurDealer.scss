@@ -1,0 +1,46 @@
+.privacy-modal {
+  z-index: 101;
+  background: rgba($black, 0.6);
+  overflow: auto;
+  animation: animateModal 0.5s;
+  @include position(fixed, 0, 0, 0, 0);
+  @include displayEle(none);
+
+  &__content {
+    transform: translate(-50%, -50%);
+    background: $white;
+    width: 70%;
+    text-align: center;
+    @include position(absolute, 50%, 50%);
+    @include padMrg(padding, 1.5em 2em);
+    @include shadow(box-shadow, 0, 0, 15px, 5px, rgba($black, 0.5));
+    @include transition(all, 0.5s, ease-in-out);
+
+    p {
+      @include padMrg(margin-bottom, 1.25em);
+    }
+  }
+
+  &__close-btn {
+    font-size: $baseFontSize * 1.8;
+    float: right;
+    cursor: pointer;
+    @include transition(all, 0.5s, ease-in-out);
+    @include border-radius(50%);
+
+    &:hover,
+    &:focus {
+      color: $dodgerBlue;
+    }
+  }
+
+  &__subHeading {
+    color: #238BFA;
+  }
+}
+
+/* Keyframe animation for modal */
+@keyframes animateModal {
+  from { opacity: 0 }
+  to { opacity: 1 }
+}
