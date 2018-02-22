@@ -1,6 +1,6 @@
 .privacy-modal,
 .dealer-modal {
-  z-index: 101;
+  z-index: 110;
   background: rgba($black, 0.6);
   overflow: auto;
   animation: animateModal 0.5s;
@@ -10,7 +10,7 @@
   &__content {
     transform: translate(-50%, -50%);
     background: $white;
-    width: 70%;
+    min-width: 70%;
     text-align: center;
     @include position(absolute, 50%, 50%);
     @include padMrg(padding, 1.5em 2em);
@@ -42,7 +42,7 @@
 
 .dealer-modal {
   &__content {
-    width: 70%;
+    min-width: 10%;
   }
 
   &__subHeading {
@@ -50,32 +50,13 @@
   }
 
   &__form {
-    // border: 1px solid blue;
     overflow: hidden;
     @include padMrg(margin, 0 auto);
   }
 
-  input[type="text"],
-  input[type="email"],
-  input[type="tel"],
-  textarea {
-    // float: left;
-    @include padMrg(margin, 0 1em 1em);
-  }
-
-  input[type="text"],
-  input[type="email"],
-  input[type="tel"] {
-    width: 100%;
-  }
-
-  textarea {
-    width: 100%;
-  }
-
   .fa-check-circle {
     @include padMrg(margin-right, 0.5em);
-    color: $dodgerLightBlue;
+    color: $dodgerBlue;
   }
 
   &__terms-list {
@@ -93,7 +74,6 @@
   &__terms:last-child {
     @include padMrg(margin-bottom, 1em);
   }
-
 }
 
 /* Keyframe animation for modal */

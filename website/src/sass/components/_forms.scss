@@ -1,25 +1,32 @@
-input[type="text"],
-input[type="email"],
-input[type="tel"],
+input,
 textarea {
   display: block;
   outline: none;
+  font-size: inherit;
+  background: $white;
   @include padMrg(padding, 0.8em);
   @include padMrg(margin-bottom, 1em);
-  font-size: inherit;
+  @include borderDisplay(border, 1px, solid, $lightGrey);
+}
+
+textarea {
+  min-height: 150px;
+}
+
+input:focus,
+textarea:focus {
+  @include borderDisplay(border, 2px, solid, $dodgerBlue);
+  color: $dodgerBlue;
 }
 
 .errorBox {
   @include borderDisplay(border, 2px, solid, $red);
 }
 
-.contact-us__form {
+.contact-us__form,
+.dealer-modal__form {
   input,
   textarea {
     width: 100%;
-  }
-
-  textarea {
-    min-height: 150px;
   }
 }

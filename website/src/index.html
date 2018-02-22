@@ -26,10 +26,10 @@
         <button class="page-header__btn btn btn--turquoise" title="Become Our Dealer" id="dealer">Become Our Dealer</button>
         <nav class="page-header__nav">
           <ul class="page-header__list">
-            <li class="page-header__list-item"><a href="#" class="page-header__link" title="Home">Home</li>
-            <li class="page-header__list-item"><a href="#" class="page-header__link" title="About Us">About Us</li>
-            <li class="page-header__list-item"><a href="#" class="page-header__link" title="Products">Products</li>
-            <li class="page-header__list-item"><a href="#" class="page-header__link" title="Contact Us">Contact Us</li>
+            <li class="page-header__list-item"><a href="#sec-home" class="page-header__link" title="Home">Home</li>
+            <li class="page-header__list-item"><a href="#sec-about" class="page-header__link" title="About Us">About Us</li>
+            <li class="page-header__list-item"><a href="#sec-products" class="page-header__link" title="Products">Products</li>
+            <li class="page-header__list-item"><a href="#sec-contact" class="page-header__link" title="Contact Us">Contact Us</li>
           </ul>
         </nav>
       </div>
@@ -37,7 +37,7 @@
     <!-- Main content -->
     <main>
       <!-- Home content -->
-      <section class="home">
+      <section class="home" id="sec-home">
         <!-- Image slider -->
         <div class="slider">
           <!-- Slide 1 -->
@@ -66,7 +66,7 @@
       </section>
 
       <!-- About content -->
-      <section class="about-us">
+      <section class="about-us" id="sec-about">
         <h1><span class="about-us__subHeading">Welcome</span> to APC Pharma</h1>
         <div class="about-us__content">
           <p>We are one of the quality worldwide manufacturer and exporter of Capsule / Coated Tablet Ink used in Pharmaceutical industry through various traders and distributors in all parts of the country. We have experience over the past 15 years in development and supporting our customers on quality of ink. We contribute in making a best quality printing ink for for our customer’s products by sharing our expertise in their process.</p>
@@ -109,18 +109,18 @@
       </section>
 
       <!-- Products content -->
-      <section class="products">
+      <section class="products" id="sec-products">
         <h1 class="products__heading">Our Products</h1>
       </section>
 
       <!-- Contact content -->
-      <section class="contact-us">
+      <section class="contact-us" id="sec-contact">
         <h1><span class="contact-us__subHeading">Contact</span> Us</h1>
         <div class="contact-us__content">
           <p>You can use a quick contact form to leave your message and we will get back to you as soon as possible. If your inquiry is urgent, please use the telephone number listed below to talk to us.</p>
           <div class="contact-us__form">
             <form action="#" method="POST" name="contact-form" novalidate>
-              <input type="text" name="name" placeholder="Your name *" autofocus>
+              <input type="text" name="name" placeholder="Your name *">
               <input type="tel" name="phone" placeholder="Your phone no.">
               <input type="email" name="email" placeholder="Your email *">
               <input type="text" name="company-name" placeholder="Your company name">
@@ -166,12 +166,12 @@
         <span class="dealer-modal__close-btn" title="Close Window">&times;</span>
         <h1><span class="dealer-modal__subHeading">Become</span> Our Dealer</h1>
         <form action="#" method="POST" name="dealer-form" class="dealer-modal__form" novalidate>
+          <input type="text" name="name" placeholder="Your name *">
           <input type="text" name="company" placeholder="Your company name *">
-          <input type="text" name="name" placeholder="Your name *" autofocus>
-          <input type="email" name="email" placeholder="Your email *">
           <input type="tel" name="phone" placeholder="Your phone no. *">
-          <input type="text" name="investing-capacity" placeholder="Investing capacity">
+          <input type="email" name="email" placeholder="Your email *">
           <input type="text" name="interests" placeholder="Areas of interest">
+          <input type="text" name="investing-capacity" placeholder="Investing capacity">
           <textarea name="message" placeholder="Message *"></textarea>
           <ul class="dealer-modal__terms-list">
             <li class="dealer-modal__terms">Terms &amp; Conditions: </li>
@@ -187,8 +187,6 @@
   </div>
   <!-- Scripts -->
   <script src="js/all.js"></script>
-  <script async defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWD-WsqNhnSAcQiHWLiqrLplEopGHfvqU&callback=initMap">
-  </script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWD-WsqNhnSAcQiHWLiqrLplEopGHfvqU&callback=initMap"></script>
 </body>
 </html>
