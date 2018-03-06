@@ -1,7 +1,36 @@
 .products {
-  background-image: linear-gradient(-225deg, $dodgerLightBlue, $brightTurquoise);
+  background: $dodgerLightBlue url("../images/product-bg.jpg") no-repeat center; 
+  background-size: cover;
+  // background-image: linear-gradient(-225deg, $dodgerLightBlue, $brightTurquoise);
   min-height: 600px;
+  @include position(relative);
+
   &__heading {
+    color: $black;
+  }
+
+  &__subHeading {
     color: $white;
+  }
+
+  &__content {
+    width: 100%;
+    max-width: 1300px;
+    transform: translate(-50%, -50%);
+    @include position(absolute, 50%, 50%);
+    @include padMrg(margin, 0 auto);
+
+    h2 {
+      font-size: $baseFontSize * 1.3;
+
+      &:nth-of-type(2) {
+        color: $white;
+      }
+    }
+
+    > p {
+      color: $black;
+      @include padMrg(margin-bottom, 1em);
+    }
   }
 }
