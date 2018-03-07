@@ -17,6 +17,14 @@
     @include shadow(box-shadow, 0, 0, 15px, 5px, rgba($black, 0.5));
     @include transition(all, 0.5s, ease-in-out);
 
+    @include media(950px) {
+      min-width: 80%;
+    }
+
+    @include media(550px) {
+      min-width: 90%;
+    }
+
     p {
       @include padMrg(margin-bottom, 1.25em);
     }
@@ -43,6 +51,10 @@
 .dealer-modal {
   &__content {
     min-width: 10%;
+
+    @include media(950px) {
+      min-width: 80%;
+    }
   }
 
   &__subHeading {

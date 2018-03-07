@@ -5,6 +5,26 @@
   min-height: 600px;
   @include position(relative);
 
+  @include media(800px) {
+    min-height: 480px;
+  }
+
+  @include media(600px) {
+    min-height: 500px;
+  }
+
+  @include media(500px) {
+    min-height: 600px;
+  }
+
+  @include media(400px) {
+    min-height: 660px;
+  }
+
+  @include media(350px) {
+    min-height: 720px;
+  }
+
   &__heading {
     color: $black;
   }
@@ -20,8 +40,20 @@
     @include position(absolute, 50%, 50%);
     @include padMrg(margin, 0 auto);
 
+    @include media(1450px) {
+      width: 90%;
+    }
+
     h2 {
       font-size: $baseFontSize * 1.3;
+
+      @include media(800px) {
+        font-size: $baseFontSize * 1.1;
+      }
+
+      @include media(600px) {
+        font-size: $baseFontSize;
+      }
 
       &:nth-of-type(2) {
         color: $white;

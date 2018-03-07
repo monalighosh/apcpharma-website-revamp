@@ -4,6 +4,18 @@
   overflow: hidden;
   @include position(relative);
 
+  @include media(1450px) {
+    height: 450px;
+  }
+
+  @include media(800px) {
+    height: 350px;
+  }
+
+  @include media(600px) {
+    height: 250px;
+  }
+
   input[type="radio"] {
     display: none;
   }
@@ -38,6 +50,10 @@
     @include padMrg(padding, 2.5em);
     @include position(absolute, 50%, 50%);
     @include transition(all, 0.8s, ease-in-out, 0.2s);
+
+    @include media(600px) {
+      @include padMrg(padding, 2em);
+    }
   }
 
   &__title {
@@ -50,6 +66,18 @@
     @include transition(all, 0.8s, ease-in-out, 0.4s);
     @include padMrg(padding, 0.5em);
     @include position(absolute, 50%, 150%);
+
+    @include media(1450px) {
+      font-size: $baseFontSize * 1.3;
+    }
+
+    @include media(800px) {
+      font-size: $baseFontSize * 1.1;
+    }
+
+    @include media(600px) {
+      font-size: $baseFontSize
+    }
   }
 
   &__dot {
@@ -64,6 +92,12 @@
     @include border-radius(50%);
     @include displayEle();
     @include transition(all, 0.5s, ease-in-out);
+
+    @include media(600px) {
+      width: 15px;
+      height: 15px;
+      @include position(absolute, 85%, 50%);
+    }
 
       &:hover {
         @include borderDisplay(border, 2px, solid, rgba($black, 0));
@@ -85,6 +119,11 @@
         height: 15px;
         width: 15px;
         background: rgba($black, 0.5);
+
+        @include media(600px) {
+          width: 10px;
+          height: 10px;
+        }
       }
     }
 
@@ -115,6 +154,18 @@ input[type="radio"]:checked + label + div {
 
 input[type="radio"]:checked + label + div .slider__txBg {
   width: 50%;
+
+  @include media(1450px) {
+    width: 65%;
+  }
+
+  @include media(1200px) {
+    width: 85%;
+  }
+
+  @include media(900px) {
+    width: 100%;
+  }
 }
 
 input[type="radio"]:checked + label + div .slider__title {

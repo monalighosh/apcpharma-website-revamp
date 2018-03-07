@@ -59,6 +59,13 @@
   }
 }
 
+/* Media queries */
+@mixin media($breakpoint) {
+  @media screen and (max-width: $breakpoint) {
+    @content;
+  }
+}
+
 // Clearfix
 @mixin clearFix() {
   &:before, &:after {

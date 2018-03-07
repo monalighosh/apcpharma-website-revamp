@@ -12,6 +12,10 @@
     @include padMrg(margin, 0 auto 3em);
     @include clearFix();
 
+    @include media(1450px) {
+      width: 90%;
+    }
+
     > p {
       @include padMrg(margin-bottom, 3em);
     }
@@ -20,8 +24,12 @@
   &__form,
   &__details {
     width: 45%;
-
     text-align: left;
+
+    @include media(800px) {
+      width: 99%;
+      text-align: center;
+    }
   }
 
   &__form {
@@ -30,6 +38,10 @@
 
   &__details {
     float: right;
+
+    @include media(800px) {
+      @include padMrg(margin-top, 2em);
+    }
 
     &-list {
       list-style-type: none;
@@ -45,6 +57,10 @@
         color: $dodgerLightBlue;
         @include displayEle(block);
         @include position(absolute, 5px, -30px);
+
+        @include media(800px) {
+          content: "";
+        }
       }
     }
   }

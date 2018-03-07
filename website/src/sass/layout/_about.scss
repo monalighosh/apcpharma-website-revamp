@@ -8,6 +8,10 @@
     max-width: 1300px;
     @include padMrg(margin, 0 auto);
 
+    @include media(1450px) {
+      width: 90%;
+    }
+
     > p {
       @include padMrg(margin-bottom, 1em);
     }
@@ -25,6 +29,10 @@
     height: 300px;
     @include clearFix();
 
+    @include media(1450px) {
+      height: 600px;
+    }
+
     > div {
       float:left;
       width: 25%;
@@ -37,6 +45,7 @@
     width: 100%;
     background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
   }
 
   &__feature-description {

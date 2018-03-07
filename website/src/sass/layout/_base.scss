@@ -2,6 +2,14 @@ body {
   background: $white;
   color: $midGrey;
   font: $baseFontWeight $baseFontSize $baseFont;
+
+  @include media(800px) {
+    font-size: 108%;
+  }
+
+  @include media(600px) {
+    font-size: 100%;
+  }
 }
 
 h1 {
@@ -9,6 +17,10 @@ h1 {
   font-size: $headingFontSize;
   font-weight: $fontWeightMediumBold;
   @include padMrg(padding-bottom, 1em);
+
+  @include media(800px) {
+    font-size: $baseFontSize * 1.6;
+  }
 }
 
 h2 {
@@ -35,6 +47,14 @@ a:active {
 
 main {
   @include padMrg(margin-top, 4.5em);
+
+  @include media(1200px) {
+    @include padMrg(margin-top, 3.5em);
+  }
+
+  @include media(600px) {
+    @include padMrg(margin-top, 3.1em);
+  }
 }
 
 section {

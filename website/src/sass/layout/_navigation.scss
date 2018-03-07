@@ -1,6 +1,18 @@
 .page-header__nav {
   float: right;
   @include padMrg(margin, 0 2em 0);
+
+  @include media(1200px) {
+    @include padMrg(margin, 0 1em 0);
+  }
+
+  @include media(1080px) {
+    @include padMrg(margin, 0 1em 0);
+  }
+
+  @include media(920px) {
+    @include displayEle(none);
+  }
 }
 
 .page-header__list {
@@ -16,6 +28,11 @@ a.page-header__link {
   font-size: $fontSizeSmall;
   text-transform: uppercase;
   @include padMrg(padding, 1em);
+
+  @include media(1080px) {
+    font-size: 85%;
+    @include padMrg(padding, 0.6em);
+  }
 
   &:hover {
     color: $dodgerBlue;

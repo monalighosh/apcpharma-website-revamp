@@ -8,6 +8,18 @@
   @include position(fixed, 0, 0);
   @include shadow(box-shadow, 0, -5px, 13px, 5px, rgba($black, 0.2));
 
+  @include media(1200px) {
+    @include padMrg(padding, 0.5em 1.5em);
+  }
+
+  @include media(600px) {
+    @include padMrg(padding, 0.3em 1.2em);
+  }
+
+  @include media(510px) {
+    @include padMrg(padding, 0.3em 0);
+  }
+
   &__content {
     max-width: 1300px;
     width: 100%;
@@ -20,6 +32,22 @@
     font-weight: $fontWeightBold;
     float: left;
     @include displayEle();
+
+    @include media(1200px) {
+      font-size: $baseFontSize * 2.2;
+    }
+
+    @include media(950px) {
+      font-size: $baseFontSize * 2;
+    }
+
+    @include media(600px) {
+      font-size: $baseFontSize * 1.7;
+    }
+
+    @include media(510px) {
+      @include padMrg(padding, 0 0.5em);
+    }
   }
 
   &--logo-green {
@@ -29,5 +57,16 @@
   &__btn {
     float: right;
     @include padMrg(margin, 0.6em 0 0);
+
+    @include media(920px) {
+      @include padMrg(margin, 0.9em 3.5em);
+    }
+
+    @include media(510px) {
+      width: 100%;
+      @include displayEle(block);
+      @include padMrg(margin, 0);
+      @include border-radius(0);
+    }
   }
 }

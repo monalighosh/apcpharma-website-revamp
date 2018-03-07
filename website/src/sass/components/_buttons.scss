@@ -8,6 +8,15 @@
   @include border-radius(30px, top-right bottom-right top-left bottom-left);
   @include transition(all, 0.5s, ease-in-out);
 
+  @include media(1200px) {
+    @include padMrg(padding, 0.8em 1.5em);
+  }
+
+  @include media(1060px) {
+    font-size: 85%;
+    @include padMrg(padding, 0.9em 1.2em);
+  }
+
   &--turquoise {
     background: $brightTurquoise;
     color: $white;
