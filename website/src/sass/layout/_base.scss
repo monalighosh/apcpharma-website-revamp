@@ -2,6 +2,7 @@ body {
   background: $white;
   color: $midGrey;
   font: $baseFontWeight $baseFontSize $baseFont;
+  overflow-x: hidden;
 
   @include media(800px) {
     font-size: 108%;
