@@ -31,3 +31,12 @@ textarea:focus {
     width: 100%;
   }
 }
+
+.form-submit-message {
+  opacity: 0;
+  background: lighten($dodgerLightBlue, 40%);
+  color: $dodgerBlue;
+  @include padMrg(padding, 0.7em);
+  @include padMrg(margin, 1.2em 0);
+  @include transition(opacity, 0.5s, ease);
+}

@@ -18,6 +18,10 @@
   <link href="images/favicon-16x16.jpg" rel="icon" type="image/jpeg" sizes="16x16">
   <!-- Disable telephone number styling in microsoft edge -->
   <meta name="format-detection" content="telephone=no">
+  <!-- Script - Babel polyfill -->
+  <script src="libs/polyfill.min.js"></script>
+  <!-- Google recaptcha for form -->
+  <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 <body>
   <div class="wrapper">
@@ -141,13 +145,18 @@
         <div class="contact-us__content">
           <p>You can use a quick contact form to leave your message and we will get back to you as soon as possible. If your inquiry is urgent, please use our telephone numbers listed below to talk to us.</p>
           <div class="contact-us__form">
-            <form name="contact-form" id="contact-form">
+            <form action="http://www.apcpharma.com/cgi-bin/FormMail.pl" method="POST" name="contact-form" id="contact-form">
+              <input type="hidden" name="recipient" value="contact@apcpharma.com">
+              <input type="hidden" name="subject" value="Contact From APC Pharma Website">
               <input type="text" name="name" placeholder="Your name *" required>
               <input type="tel" name="phone" placeholder="Your phone no. *" required>
               <input type="email" name="email" placeholder="Your email *" required>
               <input type="text" name="company-name" placeholder="Your company name">
               <textarea name="message" placeholder="Message"></textarea>
+              <div class="g-recaptcha" data-sitekey="6Le3KksUAAAAACxzTcKpc5ZBIcTJwtG4j4WUx2sm" data-callback="capchaFilled" data-expired-callback="capchaExpired"></div>
+              <br/>
               <button class="btn btn--dodgerBlue" type="submit">Send</button>
+              <div class="form-submit-message"></div>
             </form>
           </div>
           <div class="contact-us__details">
@@ -187,7 +196,7 @@
       <div class="dealer-modal__content">
         <span class="dealer-modal__close-btn" title="Close Window">&times;</span>
         <h1><span class="dealer-modal__subHeading">Become</span> Our Dealer</h1>
-        <form action="#" method="POST" name="dealer-form" class="dealer-modal__form">
+        <form action="#" method="POST" name="dealer-form" class="dealer-modal__form" id="dealer-modal-form">
           <input type="text" name="name" placeholder="Your name *" required>
           <input type="text" name="company" placeholder="Your company name *" required>
           <input type="tel" name="phone" placeholder="Your phone no. *" required>
@@ -203,12 +212,13 @@
             <li class="dealer-modal__terms"><i class="far fa-check-circle"></i>Payment on delievery system.</li>
           </ul>
           <button class="btn btn--dodgerBlue" type="submit">Send</button>
+          <div class="form-submit-message"></div>
         </form>
       </div>
     </div>
   </div>
   <!-- Scripts -->
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWD-WsqNhnSAcQiHWLiqrLplEopGHfvqU&callback=initMap"></script>
   <script src="js/all.js"></script>
-  <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWD-WsqNhnSAcQiHWLiqrLplEopGHfvqU&callback=initMap"></script> -->
 </body>
 </html>

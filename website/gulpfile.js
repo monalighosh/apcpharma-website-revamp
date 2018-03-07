@@ -8,6 +8,7 @@ const concat = require("gulp-concat");
 const cleanCSS = require("gulp-clean-css");
 const htmlmin = require("gulp-htmlmin");
 const babel = require("gulp-babel");
+const babelPolyfill = require("babel-polyfill");
 
 // File Paths
 const htmlFiles = "src/**/*.html";
@@ -46,6 +47,12 @@ gulp.task("js", function(){
   .pipe(gulp.dest("build/js"));
 });
 
+// Babel polyfill to run ES6 features
+gulp.task('libs', function(){
+  return gulp.src("node_modules/babel-polyfill/dist/polyfill.min.js")
+  .pipe(gulp.dest('build/libs'));
+});
+
 // Watch tasks (Html, css, images, js)
 gulp.task("watch", function(){
   gulp.watch(htmlFiles, ["html"]);
@@ -55,4 +62,4 @@ gulp.task("watch", function(){
 });
 
 // Default Task
-gulp.task('default', ["html", "css", "imgs", "js", "watch"]);
+gulp.task('default', ["html", "css", "imgs", "js", "libs", "watch"]);
