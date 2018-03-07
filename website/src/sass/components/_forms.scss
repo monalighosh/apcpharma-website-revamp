@@ -10,7 +10,7 @@ textarea {
 }
 
 textarea {
-  min-height: 150px;
+  min-height: 100px;
   resize: none;
 }
 
@@ -28,6 +28,6 @@ textarea:focus {
 .dealer-modal__form {
   input,
   textarea {
-    width: 99%;
+    width: 100%;
   }
 }

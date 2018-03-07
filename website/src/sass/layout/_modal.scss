@@ -18,7 +18,8 @@
     @include transition(all, 0.5s, ease-in-out);
 
     @include media(950px) {
-      min-width: 80%;
+      min-width: 85%;
+      @include padMrg(padding, 1.5em 1em);
     }
 
     @include media(550px) {
@@ -48,12 +49,27 @@
   }
 }
 
+.privacy-modal,
 .dealer-modal {
   &__content {
-    min-width: 10%;
+
+    @include media(420px) {
+      height: 600px;
+      overflow-y: scroll;
+    }
+  }
+}
+
+.dealer-modal {
+  &__content {
+    min-width: 70%;
 
     @include media(950px) {
-      min-width: 80%;
+      min-width: 85%;
+    }
+
+    @include media(550px) {
+      min-width: 90%;
     }
   }
 
@@ -64,6 +80,28 @@
   &__form {
     overflow: hidden;
     @include padMrg(margin, 0 auto);
+
+    input {
+      width: 49%;
+      @include displayEle(inline-block);
+
+      &:nth-of-type(even) {
+        float: right;
+      }
+
+      &:nth-of-type(odd) {
+        float: left;
+      }
+
+      textarea {
+        @include clearFix();
+      }
+
+      @include media(420px) {
+        width: 100%;
+        @include displayEle(block);
+      }
+    }
   }
 
   .fa-check-circle {

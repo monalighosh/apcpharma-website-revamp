@@ -22,6 +22,10 @@ h1 {
   @include media(800px) {
     font-size: $baseFontSize * 1.6;
   }
+
+  @include media(400px) {
+    font-size: $baseFontSize * 1.45;
+  }
 }
 
 h2 {
@@ -55,6 +59,10 @@ main {
 
   @include media(600px) {
     @include padMrg(margin-top, 3.1em);
+  }
+
+  @include media(450px) {
+    @include padMrg(margin-top, 4.5em);
   }
 }
 
