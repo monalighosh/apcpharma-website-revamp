@@ -145,9 +145,7 @@
         <div class="contact-us__content">
           <p>You can use a quick contact form to leave your message and we will get back to you as soon as possible. If your inquiry is urgent, please use our telephone numbers listed below to talk to us.</p>
           <div class="contact-us__form">
-            <form action="http://www.apcpharma.com/cgi-bin/FormMail.pl" method="POST" name="contact-form" id="contact-form">
-              <input type="hidden" name="recipient" value="contact@apcpharma.com">
-              <input type="hidden" name="subject" value="Contact From APC Pharma Website">
+            <form action="php/form.php" method="POST" name="contact-form" id="contact-form">
               <input type="text" name="name" placeholder="Your name *" required>
               <input type="tel" name="phone" placeholder="Your phone no. *" required>
               <input type="email" name="email" placeholder="Your email *" required>

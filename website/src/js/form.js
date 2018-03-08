@@ -21,6 +21,7 @@ function submitForm(e) {
   };
   let messageDiv = this.querySelector(".form-submit-message");
   const xhr = new XMLHttpRequest();
+  xhr.open("POST", "php/form.php");
   xhr.onload = function() {
     if(xhr.status === 200) {
       if(recaptchaSubmit) {
@@ -37,7 +38,6 @@ function submitForm(e) {
   xhr.onerror = function() {
     console.error(`Request failed: ${xhr.responseText}`);
   };
-  xhr.open("POST", "cgi-bin/FormMail.pl");
   xhr.send(JSON.stringify(formData));
   e.preventDefault();
 }

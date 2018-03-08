@@ -15,6 +15,7 @@ const htmlFiles = "src/**/*.html";
 const cssFiles = "src/sass/**/*.scss";
 const imagesFiles = "src/images/**/*";
 const jsFiles = "src/js/**/*.js";
+const phpFiles = "src/php/**/*.php";
 
 // HTML tasks (Minify)
 gulp.task("html", function(){
@@ -50,7 +51,13 @@ gulp.task("js", function(){
 // Babel polyfill to run ES6 features
 gulp.task('libs', function(){
   return gulp.src("node_modules/babel-polyfill/dist/polyfill.min.js")
-  .pipe(gulp.dest('build/libs'));
+  .pipe(gulp.dest("build/libs"));
+});
+
+// Php tasks
+gulp.task("php", function(){
+  return gulp.src(phpFiles)
+  .pipe(gulp.dest("build/php"));
 });
 
 // Watch tasks (Html, css, images, js)
@@ -59,7 +66,8 @@ gulp.task("watch", function(){
   gulp.watch(cssFiles, ["css"]);
   gulp.watch(imagesFiles, ["imgs"]);
   gulp.watch(jsFiles, ["js"]);
+  gulp.watch(phpFiles, ["php"]);
 });
 
 // Default Task
-gulp.task('default', ["html", "css", "imgs", "js", "libs", "watch"]);
+gulp.task('default', ["html", "css", "imgs", "js", "php", "libs", "watch"]);
