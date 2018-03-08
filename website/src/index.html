@@ -20,8 +20,6 @@
   <meta name="format-detection" content="telephone=no">
   <!-- Script - Babel polyfill -->
   <script src="libs/polyfill.min.js"></script>
-  <!-- Google recaptcha for form -->
-  <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 <body>
   <div class="wrapper">
@@ -149,9 +147,8 @@
               <input type="text" name="name" placeholder="Your name *" required>
               <input type="tel" name="phone" placeholder="Your phone no. *" required>
               <input type="email" name="email" placeholder="Your email *" required>
-              <input type="text" name="company-name" placeholder="Your company name">
+              <input type="text" name="company" placeholder="Your company name">
               <textarea name="message" placeholder="Message"></textarea>
-              <div class="g-recaptcha" data-sitekey="6Le3KksUAAAAACxzTcKpc5ZBIcTJwtG4j4WUx2sm" data-callback="capchaFilled" data-expired-callback="capchaExpired"></div>
               <br/>
               <button class="btn btn--dodgerBlue" type="submit">Send</button>
               <div class="form-submit-message"></div>
@@ -194,7 +191,7 @@
       <div class="dealer-modal__content">
         <span class="dealer-modal__close-btn" title="Close Window">&times;</span>
         <h1><span class="dealer-modal__subHeading">Become</span> Our Dealer</h1>
-        <form action="#" method="POST" name="dealer-form" class="dealer-modal__form" id="dealer-modal-form">
+        <form action="php/form.php" method="POST" name="dealer-form" class="dealer-modal__form" id="dealer-modal-form">
           <input type="text" name="name" placeholder="Your name *" required>
           <input type="text" name="company" placeholder="Your company name *" required>
           <input type="tel" name="phone" placeholder="Your phone no. *" required>
@@ -216,7 +213,7 @@
     </div>
   </div>
   <!-- Scripts -->
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWD-WsqNhnSAcQiHWLiqrLplEopGHfvqU&callback=initMap"></script>
   <script src="js/all.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWD-WsqNhnSAcQiHWLiqrLplEopGHfvqU&callback=initMap"></script>
 </body>
 </html>

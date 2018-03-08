@@ -3,7 +3,7 @@
     $name = $_POST["name"];
     $tel = $_POST["phone"];
     $email = $_POST["email"];
-    $company = $_POST["company-name"];
+    $company = $_POST["company"];
     $message = $_POST["message"];
 
     $to = "contact@apcpharma.com";

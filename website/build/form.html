@@ -1,24 +1,26 @@
-<!DOCTYPE html><html><head><title></title></head><body><div class="contact-us__form"><form action="form.php" method="POST" name="contact-form"><input type="text" name="name" placeholder="Your name *" required> <input type="tel" name="phone" placeholder="Your phone no. *" required> <input type="email" name="email" placeholder="Your email *" required> <input type="text" name="company-name" placeholder="Your company name"> <textarea name="message" placeholder="Message"></textarea><br><button type="submit">Send</button><div style="border: 1px solid red; height: 30px; width: 30px" class="form-submit-message"></div></form><script>"use strict";
+<!DOCTYPE html><html><head><title></title></head><body><div class="contact-us__form"><form action="php/form.php" method="POST" name="contact-form"><input type="text" name="name" placeholder="Your name *" required> <input type="tel" name="phone" placeholder="Your phone no. *" required> <input type="email" name="email" placeholder="Your email *" required> <input type="text" name="company" placeholder="Your company name"> <textarea name="message" placeholder="Message"></textarea><br><button type="submit">Send</button><div style="border: 1px solid red; height: 30px; width: 30px" class="form-submit-message"></div></form><script>"use strict";
               let forms = document.querySelector("[name='contact-form']");
               forms.addEventListener("submit", submitForm);
 
               function submitForm(e) {
                 const formData = {
                   name: this.querySelector("[name='name']").value,
-                  tel: this.querySelector("[name='phone']").value,
+                  phone: this.querySelector("[name='phone']").value,
                   email: this.querySelector("[name='email']").value,
-                  company: this.querySelector("[name='company-name']").value,
+                  company: this.querySelector("[name='company']").value,
                   message: this.querySelector("[name='message']").value
                 };
+
+
+
                 let messageDiv = this.querySelector(".form-submit-message");
                 let d = new FormData();
-                d.append("name", formData.name);
-                d.append("phone", formData.tel);
-                d.append("email", formData.email);
-                d.append("company-name", formData.company);
-                d.append("message", formData.message);
+                for(let key in formData) {
+                  d.append(`"${key}", ${formData[key]}`);
+                }
+
                 const xhr = new XMLHttpRequest();
-                xhr.open("POST", "form.php");
+                xhr.open("POST", "php/form.php");
                 xhr.onload = function() {
                   if(xhr.status === 200) {
                     if(xhr.responseText == "success") {
