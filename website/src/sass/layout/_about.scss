@@ -125,17 +125,33 @@
 }
 
 .img-quality {
-  background-image: url(../images/about-quality.jpg);
+  background-image: url(../images/about-quality-650.jpg);
+
+  @include media(500px) {
+    background-image: url(../images/about-quality-350.jpg);
+  }
 }
 
 .img-time {
-  background-image: url(../images/about-time.jpg);
+  background-image: url(../images/about-time-650.jpg);
+
+  @include media(500px) {
+    background-image: url(../images/about-time-350.jpg);
+  }
 }
 
 .img-ethical {
-  background-image: url(../images/about-ethical.jpg);
+  background-image: url(../images/about-ethical-650.jpg);
+
+  @include media(500px) {
+    background-image: url(../images/about-ethical-350.jpg);
+  }
 }
 
 .img-team {
-  background-image: url(../images/about-team.jpg);
+  background-image: url(../images/about-team-650.jpg);
+
+  @include media(500px) {
+    background-image: url(../images/about-team-350.jpg);
+  }
 }

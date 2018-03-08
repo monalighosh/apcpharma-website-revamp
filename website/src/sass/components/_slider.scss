@@ -32,15 +32,63 @@
   }
 
   &--slide1 {
-    background-image: url(../images/home-slide1.jpg);
+    background-image: url(../images/home-slide1-2500.jpg);
+
+    @include media(1700px) {
+      background-image: url(../images/home-slide1-1700.jpg);
+    }
+
+    @include media(1200px) {
+      background-image: url(../images/home-slide1-1200.jpg);
+    }
+
+    @include media(800px) {
+      background-image: url(../images/home-slide1-800.jpg);
+    }
+
+    @include media(500px) {
+      background-image: url(../images/home-slide1-500.jpg);
+    }
   }
 
   &--slide2 {
-    background-image: url(../images/home-slide2.jpg);
+    background-image: url(../images/home-slide2-2500.jpg);
+
+    @include media(1700px) {
+      background-image: url(../images/home-slide2-1700.jpg);
+    }
+
+    @include media(1200px) {
+      background-image: url(../images/home-slide2-1200.jpg);
+    }
+
+    @include media(800px) {
+      background-image: url(../images/home-slide2-800.jpg);
+    }
+
+    @include media(500px) {
+      background-image: url(../images/home-slide2-500.jpg);
+    }
   }
 
   &--slide3 {
-    background-image: url(../images/home-slide3.jpg);
+    background-image: url(../images/home-slide3-2500.jpg);
+
+    @include media(1700px) {
+      background-image: url(../images/home-slide3-1700.jpg);
+    }
+
+    @include media(1200px) {
+      background-image: url(../images/home-slide3-1200.jpg);
+    }
+
+    @include media(800px) {
+      background-image: url(../images/home-slide3-800.jpg);
+    }
+
+    @include media(500px) {
+      background-image: url(../images/home-slide3-500.jpg);
+    }
   }
 
   &__txBg {
