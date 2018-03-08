@@ -62,7 +62,7 @@
 
 .dealer-modal {
   &__content {
-    min-width: 70%;
+    min-width: 20%;
 
     @include media(950px) {
       min-width: 85%;
@@ -81,27 +81,6 @@
     overflow: hidden;
     @include padMrg(margin, 0 auto);
 
-    input {
-      width: 49%;
-      @include displayEle(inline-block);
-
-      &:nth-of-type(even) {
-        float: right;
-      }
-
-      &:nth-of-type(odd) {
-        float: left;
-      }
-
-      textarea {
-        @include clearFix();
-      }
-
-      @include media(420px) {
-        width: 100%;
-        @include displayEle(block);
-      }
-    }
   }
 
   .fa-check-circle {

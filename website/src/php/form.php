@@ -19,5 +19,5 @@
     } else {
       echo "Failed! Try again!";
     }
-  }
+  } 
 ?>
