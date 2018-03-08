@@ -62,7 +62,12 @@
 
 .dealer-modal {
   &__content {
-    min-width: 20%;
+    min-width: 30%;
+    max-width: 1300px;
+
+    @include media(1250px) {
+      min-width: 65%;
+    }
 
     @include media(950px) {
       min-width: 85%;

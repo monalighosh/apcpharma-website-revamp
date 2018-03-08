@@ -26,7 +26,7 @@ function submitFormData(e) {
     if(xhr.status === 200) {
       if(xhr.responseText == "success") {
         messageDiv.style.opacity = "1";
-        messageDiv.innerHTML = `Thank you for getting in touch ${formData.name}! We will get back to you as soon as possible.`;
+        messageDiv.innerHTML = `Thank you for getting in touch ${formData.name}! <br/>We will get back to you as soon as possible.`;
         e.target.reset();
       } else {
         messageDiv.style.opacity = "1";
