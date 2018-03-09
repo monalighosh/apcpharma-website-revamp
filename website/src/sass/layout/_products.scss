@@ -5,7 +5,16 @@
   min-height: 600px;
   @include position(relative);
 
+  @include media(1700px) {
+    background-image: url("../images/product-bg-1700.jpg"); 
+  }
+
+  @include media(1200px) {
+    background-image: url("../images/product-bg-1200.jpg"); 
+  }
+
   @include media(800px) {
+    background-image: url("../images/product-bg-800.jpg"); 
     min-height: 480px;
   }
 
@@ -14,6 +23,7 @@
   }
 
   @include media(500px) {
+    background-image: url("../images/product-bg-500.jpg"); 
     min-height: 600px;
   }
 
