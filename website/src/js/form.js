@@ -14,8 +14,11 @@ function submitFormData(e) {
     }
   });
 
-  let messageDiv = this.querySelector(".form-submit-message");
   let formDataToSend = new FormData();
+  const messageDiv =  document.createElement("div");
+  let messageDivTxt = document.createTextNode("");
+  messageDiv.appendChild(messageDivTxt);
+  messageDiv.classList.add("form-submit-message");
   for(let key in formData) {
     formDataToSend.append(key, formData[key]);
   }
@@ -27,10 +30,12 @@ function submitFormData(e) {
       if(xhr.responseText == "success") {
         messageDiv.style.opacity = "1";
         messageDiv.innerHTML = `Thank you for getting in touch ${formData.name}! <br/>We will get back to you as soon as possible.`;
+        e.target.appendChild(messageDiv);
         e.target.reset();
       } else {
         messageDiv.style.opacity = "1";
         messageDiv.innerHTML = `Form submission failed.`;
+        e.target.appendChild(messageDiv);
       }
     }
   };
