@@ -25,10 +25,7 @@ function submitFormData(e) {
     formDataToSend.append(key, formData[key]);
   }
   // Create new div element for the form to display success or failure message
-  const messageDiv =  document.createElement("div");
-  let messageDivTxt = document.createTextNode("");
-  messageDiv.appendChild(messageDivTxt);
-  messageDiv.classList.add("form-submit-message");
+  const messageDiv =  e.target.querySelector(".form-submit-message");
 
   // Create AJAX request to load the success or fail message without reloading page
   const xhr = new XMLHttpRequest();
@@ -39,15 +36,15 @@ function submitFormData(e) {
       if(xhr.responseText == "success") {
         // Append new div element to form which displays thank you message
         messageDiv.style.opacity = "1";
+        messageDiv.style.display = "block";
         messageDiv.innerHTML = `Thank you for getting in touch ${formData.name}! <br/>We will get back to you as soon as possible.`;
-        e.target.appendChild(messageDiv);
         // Reset form
         e.target.reset();
       } else {
         // Append new div element to form which displays failure message
         messageDiv.style.opacity = "1";
+        messageDiv.style.display = "block";
         messageDiv.innerHTML = `Form submission failed.`;
-        e.target.appendChild(messageDiv);
       }
     }
   };
