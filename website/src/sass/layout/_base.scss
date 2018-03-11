@@ -4,6 +4,10 @@ body {
   font: $baseFontWeight $baseFontSize $baseFont;
   overflow-x: hidden;
 
+  @include media(1280px) {
+    font-size: 110%;
+  }
+
   @include media(800px) {
     font-size: 108%;
   }
@@ -18,6 +22,10 @@ h1 {
   font-size: $headingFontSize;
   font-weight: $fontWeightMediumBold;
   @include padMrg(padding-bottom, 1em);
+
+  @include media(1280px) {
+    font-size: $baseFontSize * 1.8;
+  }
 
   @include media(800px) {
     font-size: $baseFontSize * 1.6;
@@ -53,7 +61,7 @@ a:active {
 main {
   @include padMrg(margin-top, 4.5em);
 
-  @include media(1200px) {
+  @include media(1280px) {
     @include padMrg(margin-top, 3.5em);
   }
 

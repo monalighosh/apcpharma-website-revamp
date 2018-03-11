@@ -29,6 +29,10 @@
     p {
       @include padMrg(margin-bottom, 1.25em);
     }
+
+    button {
+      @include padMrg(margin-bottom, 2em);
+    }
   }
 
   &__close-btn {
@@ -53,9 +57,15 @@
 .dealer-modal {
   &__content {
 
-    @include media(420px) {
+    @include media(1280px) {
       height: 600px;
       overflow-y: scroll;
+    }
+
+    @include media(1280px) {
+      @media (max-height: 600px) {
+        height: 500px;
+      }
     }
   }
 }
@@ -65,7 +75,7 @@
     min-width: 30%;
     max-width: 1300px;
 
-    @include media(1250px) {
+    @include media(1280px) {
       min-width: 65%;
     }
 

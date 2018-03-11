@@ -8,7 +8,7 @@
   @include border-radius(30px, top-right bottom-right top-left bottom-left);
   @include transition(all, 0.5s, ease-in-out);
 
-  @include media(1200px) {
+  @include media(1280px) {
     @include padMrg(padding, 0.8em 1.5em);
   }
 

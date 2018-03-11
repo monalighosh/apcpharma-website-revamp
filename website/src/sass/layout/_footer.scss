@@ -5,4 +5,8 @@
   text-align: center;
   width: 100%;
   @include padMrg(padding, 1.5em);
+
+  @include media(1280px) {
+    @include padMrg(padding, 1.1em);
+  }
 }

@@ -8,7 +8,7 @@
   @include position(fixed, 0, 0);
   @include shadow(box-shadow, 0, -5px, 13px, 5px, rgba($black, 0.2));
 
-  @include media(1200px) {
+  @include media(1280px) {
     @include padMrg(padding, 0.5em 1.5em);
   }
 
@@ -33,7 +33,7 @@
     float: left;
     @include displayEle();
 
-    @include media(1200px) {
+    @include media(1280px) {
       font-size: $baseFontSize * 2.2;
     }
 
