@@ -39,12 +39,20 @@
     font-size: $baseFontSize * 1.8;
     float: right;
     cursor: pointer;
+    transform: translate(-100%, 0);
+    background: $lightestGrey;
+    @include position(absolute, 0, 100%);
     @include transition(all, 0.5s, ease-in-out);
-    @include border-radius(50%);
+    @include padMrg(padding, 0 0.5em);
+
+    @include media(500px) {
+      font-size: $baseFontSize * 1.4;
+    }
 
     &:hover,
     &:focus {
-      color: $dodgerBlue;
+      color: $lightestGrey;
+      background: $black;
     }
   }
 
