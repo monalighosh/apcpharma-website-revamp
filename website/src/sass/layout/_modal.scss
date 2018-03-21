@@ -75,6 +75,12 @@
         height: 500px;
       }
     }
+
+    @include media(750px) {
+      @media (max-height: 500px) {
+        height: 310px;
+      }
+    }
   }
 }
 

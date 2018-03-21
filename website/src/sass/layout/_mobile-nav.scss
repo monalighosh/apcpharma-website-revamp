@@ -59,6 +59,12 @@
     list-style-type: none;
     width: 100%;
     @include padMrg(margin-top, 6em);
+
+    @include media(750px) {
+      @media (max-height: 500px) {
+        @include padMrg(margin-top, 1em);
+      }
+    }
   }
 
   &__items {
@@ -67,6 +73,16 @@
     @include displayEle(block);
     @include padMrg(padding, 1em);
     @include borderDisplay(bottom, 1px, solid, $brightTurquoise);
+
+    &:last-child {
+      @include borderDisplay(bottom, 0, solid, $brightTurquoise);
+    }
+
+    @include media(750px) {
+      @media (max-height: 500px) {
+        font-size: $baseFontSize * 1.1;
+      }
+    }
   }
 
   &__close-btn {
